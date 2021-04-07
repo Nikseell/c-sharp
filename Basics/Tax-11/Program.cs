@@ -28,7 +28,7 @@ namespace Tax_11
         //change only this method accordingly.
         static double CalculateSalesTax(double price)
         {
-            return price;
+            return (price * 20) / 100;
         }
     }
 }

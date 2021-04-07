@@ -18,7 +18,7 @@ namespace sandbox
             // 2. programming @CODELEX ↵
             //  programming @CODELEX
             // 3. runtime error
-            // 4. compilation error
+            4. compilation error
         }
     }
 
