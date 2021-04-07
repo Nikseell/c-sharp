@@ -13,6 +13,9 @@ namespace ConvertCurrency_14
          * They have also decided that they should add a 1% fee to all foreign transactions
          * Find a way to add 1% to all currency conversions (think about the DRY principle)
          */
+        const double transactionFee = 1.01;
+        const double usdRate = 1.4;
+        const double brlRate = 7.16;
 
         static void Main(string[] args)
         {
@@ -28,16 +31,20 @@ namespace ConvertCurrency_14
             Console.ReadKey();
         }
 
+        static double Convert(double price, double rate)
+        {
+            return price * rate * transactionFee;
+        }
         //change this method accordingly
         static double ConvertToUSD(double price)
         {
-            return price;
+            return Convert(price, usdRate);
         }
 
         //change this method accordingly
         static double ConvertToBRL(double price)
         {
-            return price;
+            return Convert(price, brlRate);
         }
     }
 }
