@@ -28,7 +28,7 @@ namespace FormatCurrency_12
         //change FormatCurrency method accordingly.
         static string FormatCurrency(double price)
         {
-            return string.Empty;
+            return Math.Round(price, 2).ToString();
         }
 
         static double CalculateSalesTax(double price)
