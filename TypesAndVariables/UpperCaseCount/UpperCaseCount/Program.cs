@@ -10,6 +10,7 @@ namespace UpperCaseCount
             string sentence = Console.ReadLine();
             Console.WriteLine("");
             int countUpper = 0, i;
+
             for (i = 0; i < sentence.Length; i++)
             {
                 if(char.IsUpper(sentence[i]))
@@ -17,7 +18,7 @@ namespace UpperCaseCount
                     countUpper++;
                 }
             }
-            Console.WriteLine("There is " + countUpper + " uppercases in the sentence.");
+            Console.WriteLine("There are " + countUpper + " uppercases in the sentence.");
         }
     }
 }

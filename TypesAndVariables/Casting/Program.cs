@@ -17,7 +17,8 @@ namespace Casting
 
         static void first()
         {
-            int a = 1;
+            String aString = "1";
+            int a = Convert.ToInt32(aString);
             int b = 2;
             int c = 3;
             int d = 4;
@@ -30,7 +31,8 @@ namespace Casting
 
         static void second()
         {
-            int a = 1;
+            String aString = "1";
+            int a = Convert.ToInt32(aString);
             int b = 2;
             int c = 3;
             double d = 4.2;
