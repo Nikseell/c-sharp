@@ -17,28 +17,30 @@ namespace Casting
 
         static void first()
         {
-            String a = "1";
+            String aString = "1";
+            int a = Convert.ToInt32(aString);
             int b = 2;
             int c = 3;
-            double d = 4;
-            float e = 5;
+            int d = 4;
+            int e = 5;
 
             //fixme - should be 15 :|
-            //int sum = a + b + c + d + e;
-            //Console.WriteLine(sum);
+            int sum = a + b + c + d + e;
+            Console.WriteLine(sum);
         }
 
         static void second()
         {
-            String a = "1";
+            String aString = "1";
+            int a = Convert.ToInt32(aString);
             int b = 2;
             int c = 3;
             double d = 4.2;
-            float e = 5.3f;
+            double e = Math.Round(5.3f, 2);
 
             //fixme - should be 15.5 :| 
-            //float sum = a + b + c + d + e;
-            //Console.WriteLine(sum);
+            double sum = a + b + c + d + e;
+            Console.WriteLine(sum);
         }
     }
 }
