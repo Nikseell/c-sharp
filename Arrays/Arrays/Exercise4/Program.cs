@@ -15,17 +15,23 @@ namespace Exercise4
                 1458, 2458, 1254, 1472, 2365,
                 1456, 2265, 1457, 2456
             };
+            List<int> result = new List<int>();
 
             for (int i = 0; i < myArray.Length; i++)
             {
                 if (myArray[i] == 1245)
                 {
-                    Console.WriteLine("Contains!");
+                    result.Add(myArray[i]);
                 }
-                else
-                {
-                    Console.WriteLine("Not found!");
-                }
+            }
+
+            if (result.Count <= 0)
+            {
+                Console.WriteLine("Doesn`t contain!");
+            }
+            else
+            {
+                Console.WriteLine("Contains!");
             }
             Console.ReadKey();
         }

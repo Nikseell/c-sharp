@@ -38,7 +38,7 @@ namespace TicTacToe
                         Console.WriteLine("Press any key to exit..");
                         Console.ReadKey();
                     }
-                    else if (player1 == true)
+                    else
                     {
                         gameEnded = true;
                         Console.WriteLine("\n" + p2 + " WON!\n");
