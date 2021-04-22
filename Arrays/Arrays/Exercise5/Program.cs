@@ -8,27 +8,35 @@ namespace Exercise5
 {
     class Program
     {
-        //TODO: Write a C# program to find the index of an array element.
         private static void Main(string[] args)
         {
-            int[] myArray = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
+            int[] myArray = { 25, 14, 56, 15, 36, 56, 77, 18, 29, 49 };
 
             var indexOfElement36 = -1;
             var indexOfElement29 = -1;
+            var secondIndexOfElement36 = -1;
+            var secondIndexOfElement29 = -1;
 
-            /*
-            fixme
-            for (?) {
-                
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                if (myArray[i] == 36)
+                {
+                    secondIndexOfElement36 = i;
+                }
+                if (myArray[i] == 29)
+                {
+                    secondIndexOfElement29 = i;
+                }
             }
-            */
+
+            Console.WriteLine("Solution 1 - using Array.IndexOf()");
             Console.WriteLine("Index position of 36 is: " + indexOfElement36);
-            Console.WriteLine("Index position of 29 is: " + indexOfElement29);
-            
-            //Expected output:
-            //Index position of 36 is: 4
-            //Index position of 29 is: 8
-            
+            Console.WriteLine("Index position of 29 is: " + indexOfElement29 + "\n");
+
+            Console.WriteLine("Solution 2 - using For loop");
+            Console.WriteLine("Index position of 36 is: " + secondIndexOfElement36);
+            Console.WriteLine("Index position of 29 is: " + secondIndexOfElement29);
+            Console.ReadKey();
         }
     }
 }
