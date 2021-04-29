@@ -59,7 +59,6 @@ namespace Exercise8
                 for (int j = 0; j < splitCount; j++)
                 {
                     Console.Write("/");
-
                 }
                 for (int q = 0; q < starCount; q++)
                 {

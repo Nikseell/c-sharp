@@ -9,7 +9,7 @@ namespace FizzBuzz
             Console.Write("Max value? ");
             int input = Int32.Parse(Console.ReadLine());
 
-            for (int i = 1; i < input + 1; i++)
+            for (int i = 1; i <= input; i++)
             {
                 if (i % 3 == 0 && i % 5 == 0)
                 {

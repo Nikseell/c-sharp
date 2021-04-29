@@ -29,9 +29,9 @@ namespace Exercise10
                 }
             }
             
-            for(int i = min; i < max + 1; i++)
+            for(int i = min; i <= max; i++)
             {
-                for(int j = i; j < max + 1; j++)
+                for(int j = i; j <= max; j++)
                 {
                     Console.Write(j);
                 }
