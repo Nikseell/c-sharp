@@ -24,6 +24,7 @@ namespace ConsoleApp1
             {
                 _currentMilage = 0;
             }
+
             _currentMilage++;
             if (_currentMilage % 10 == 0)
             {

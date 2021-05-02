@@ -8,9 +8,9 @@ namespace Date
 {
     class Date
     {
-        private int _date { set; get; }
-        private int _month { set; get; }
-        private int _year { set; get; }
+        private int _date;
+        private int _month;
+        private int _year;
 
         public Date(int date, int month, int year)
         {
