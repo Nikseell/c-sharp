@@ -7,26 +7,39 @@ using System.Threading.Tasks;
 namespace Exercise1
 {
     class Program
-    {
-        /**
-           * Origination:
-           * Audi -> Germany
-           * BMW -> Germany
-           * Honda -> Japan
-           * Mercedes -> Germany
-           * VolksWagen -> Germany
-           * Tesla -> USA
-           */
-
+    { 
         private static void Main(string[] args)
         {
             string[] array = { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
 
-            //todo - replace array with an List and print out the results
+            var carsList = new List<string>();
+            carsList.AddRange(array);
 
-            //todo - replace array with a HashSet and print out the results
+            foreach (var car in carsList)
+            {
+                Console.WriteLine(car);
+            }
 
-            //todo - replace array with a Dictionary (use brand as key and origination as value) and print out the results
+            var carsHash = new HashSet<string> { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
+
+            foreach (var car in carsHash)
+            {
+                Console.WriteLine(car);
+            }
+
+            var carsDict = new Dictionary<string, string>();
+            carsDict.Add("Audi", "Germany");
+            carsDict.Add("BMW", "Germany");
+            carsDict.Add("Honda", "Japan");
+            carsDict.Add("Mercedes", "Germany");
+            carsDict.Add("VolksWagen", "Germany");
+            carsDict.Add("Tesla", "USA");
+
+            foreach (var car in carsDict)
+            {
+                Console.WriteLine($"{car.Key} -> {car.Value}");
+            }
+            Console.ReadKey();
         }
     }
 }
