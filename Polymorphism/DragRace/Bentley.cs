@@ -1,39 +1,35 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace DragRace
 {
-    public class Lexus : ICar, INitrous
+    class Bentley : ICar
     {
         private int currentSpeed = 0;
 
         public void SpeedUp()
         {
-            currentSpeed += 17;
+            currentSpeed += 13;
         }
 
         public void SlowDown()
         {
-            currentSpeed += 17;
+            currentSpeed += 13;
         }
 
         public string ShowCurrentSpeed()
         {
             return currentSpeed.ToString();
         }
-
         public string ShowCarName()
         {
-            return "Lexus";
-        }
-
-        public void UseNitrousOxideEngine()
-        {
-            currentSpeed += 20;
+            return "Bentley";
         }
 
         public void StartEngine()
         {
-            Console.WriteLine("Rrrrrrr.....");
+            Console.WriteLine("-- silence ---");
         }
     }
 }

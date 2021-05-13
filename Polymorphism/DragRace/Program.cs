@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DragRace
 {
@@ -18,7 +20,40 @@ namespace DragRace
 
         private static void Main(string[] args)
         {
-            
+            var cars = new List<ICar> { new Audi(), new Bmw(), new Lexus(), new Tesla(), new Bentley(), new MiniCooper() };
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int x = 0; x < cars.Count; x++)
+                {
+                    if (i == 0)
+                    {
+                        cars[x].StartEngine();
+                    }
+
+                    if (i == 2)
+                    {
+                        if (cars[x] is INitrous)
+                        {
+                            ((INitrous)cars[x]).UseNitrousOxideEngine();
+                        }
+                    }
+                    else
+                    {
+                        cars[x].SpeedUp();
+                    }
+                }
+            }
+
+            List<ICar> sorted = cars.OrderBy(x => Convert.ToInt32(x.ShowCurrentSpeed())).ToList();
+
+            Console.WriteLine($"\nFastest car: \nName: {sorted.Last().ShowCarName()} \nSpeed: {sorted.Last().ShowCurrentSpeed()}");
+            Console.WriteLine("\nAll car results:");
+
+            foreach (var car in sorted)
+            {
+                Console.WriteLine($"\nName: {car.ShowCarName()} \nSpeed: {car.ShowCurrentSpeed()}");
+            }
         }
     }
 }
