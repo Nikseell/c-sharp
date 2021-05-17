@@ -1,17 +1,24 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace DragRace
 {
-    public class Bmw : ICar
+    class MiniCooper: ICar, INitrous
     {
         private int currentSpeed = 0;
 
         public void SpeedUp()
         {
-            currentSpeed += 15;
+            currentSpeed += 30;
         }
 
         public void SlowDown()
+        {
+            currentSpeed += 30;
+        }
+
+        public void UseNitrousOxideEngine()
         {
             currentSpeed += 15;
         }
@@ -23,7 +30,7 @@ namespace DragRace
 
         public string ShowCarName()
         {
-            return "Bmw";
+            return "Mini Cooper";
         }
 
         public void StartEngine()

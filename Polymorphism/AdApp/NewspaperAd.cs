@@ -5,13 +5,15 @@ namespace AdApp
         private int column;
         private int rate;
 
-        public NewspaperAd(int fee) : base(fee)
+        public NewspaperAd(int fee, int column, int rate) : base(fee)
         {
+            this.column = column;
+            this.rate = rate;
         }
 
         private new int Cost()
         {
-            var fee = base.Cost();
+            var fee = base.Cost() + rate * column;
             return fee;
         }
 
