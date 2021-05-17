@@ -71,9 +71,8 @@ namespace Hierarchy
             if (food[0] == "Meat")
             {
                 return new Meat(Convert.ToInt32(food[1]));
-
             }
-            if (food[0] == "Vegetable")
+            else if (food[0] == "Vegetable")
             {
                 return new Vegetable(Convert.ToInt32(food[1]));
             }

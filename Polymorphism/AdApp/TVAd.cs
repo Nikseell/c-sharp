@@ -13,15 +13,7 @@ namespace AdApp
         }
         
         public new int Cost() {
-            var temp = 0;
-            if (_isDouble == true)
-            {
-                temp = (_cost * 2);
-            }
-            else
-            {
-                temp = _cost;
-            }
+            var temp = _isDouble == true ? _cost * 2 : _cost;
             return base.Cost() + temp * _time;
         }
 

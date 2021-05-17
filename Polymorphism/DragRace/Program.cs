@@ -31,7 +31,7 @@ namespace DragRace
                         cars[x].StartEngine();
                     }
 
-                    if (i == 2)
+                    else if (i == 2)
                     {
                         if (cars[x] is INitrous)
                         {
